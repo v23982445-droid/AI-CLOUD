@@ -28,6 +28,16 @@ app.use(cors({
 app.use(express.json());
 app.use(express.static('public'));
 
+const path = require('path');
+
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Fallback: serve index.html for any route (SPA support)
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // In-memory storage for active transfers
 const transferSessions = new Map();
 const activeConnections = new Map();
