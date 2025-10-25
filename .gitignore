@@ -1,0 +1,35 @@
+# Node modules
+node_modules/
+
+# Temporary files
+temp/
+*.tmp
+
+# Uploaded files
+uploads/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+
+# Package manager
+package-lock.json
+yarn.lock
